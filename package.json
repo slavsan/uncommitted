@@ -1,0 +1,25 @@
+{
+  "name": "uncommitted",
+  "version": "1.0.0",
+  "description": "A node cli utility for checking uncommitted changes in projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/slavsan/uncommitted.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/slavsan/uncommitted/issues"
+  },
+  "homepage": "https://github.com/slavsan/uncommitted#readme",
+  "dependencies": {
+    "async": "^2.5.0",
+    "chalk": "^2.1.0",
+    "commander": "^2.11.0",
+    "simple-git": "^1.77.0"
+  }
+}
