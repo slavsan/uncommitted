@@ -8,6 +8,7 @@ const simpleGit = require('simple-git')()
 program
   .version('0.1.0')
   .option('-d, --directory <d>', 'Directory to check')
+  .option('-u, --uncommitted-only', 'Show only uncommitted')
   .parse(process.argv);
 
 if (!program.directory) {
@@ -50,7 +51,9 @@ fs.readdir(program.directory, (err, files) => {
         return console.log(res.path, chalk.yellow('uncommitted'))
       }
 
-      console.log(res.path, chalk.green('ok'))
+      if (!program.uncommittedOnly) {
+        console.log(res.path, chalk.green('ok'))
+      }
     })
   })
 })
